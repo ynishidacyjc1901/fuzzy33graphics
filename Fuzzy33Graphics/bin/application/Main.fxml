@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--  FXML file for fuzzy33graphics  --> 
+
+<!--  Last update 	DEC 30 2021   --> 
+<!--  Author 		YUKI NISHIDA  --> 
+
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="412.0" prefWidth="482.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <Text fx:id="t1" layoutX="41.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="rule number">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="t2" layoutX="41.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="length (1~100)">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="t3" layoutX="41.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="time    (1~200)">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtLength" layoutX="189.0" layoutY="138.0" prefHeight="25.0" prefWidth="97.0" />
+      <TextField fx:id="txtTime" layoutX="189.0" layoutY="181.0" prefHeight="25.0" prefWidth="97.0" />
+      <TextField fx:id="txtRulenumber" editable="false" layoutX="189.0" layoutY="85.0" prefHeight="25.0" prefWidth="173.0" />
+      <Button fx:id="btnOK" layoutX="298.0" layoutY="359.0" mnemonicParsing="false" onAction="#onBtnOKClicked" prefHeight="25.0" prefWidth="68.0" text="OK" />
+      <Button fx:id="btnCancel" layoutX="380.0" layoutY="359.0" mnemonicParsing="false" onAction="#onBtnCancelClicked" prefHeight="25.0" prefWidth="68.0" text="Cancel" />
+      <Text layoutX="41.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="initial condition">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Label fx:id="lblError" layoutX="41.0" layoutY="317.0" prefHeight="17.0" prefWidth="326.0" />
+      <ComboBox fx:id="combRulenumber" layoutX="189.0" layoutY="43.0" onAction="#onRuleDropdown" prefHeight="25.0" prefWidth="269.0">
+		 <items>
+      		<FXCollections fx:factory="observableArrayList">
+        		<String fx:value="3545851951512 (Slow-to-Start rule)" />
+        		<String fx:value="7469071910973 (complete conservation 1)" />
+        		<String fx:value="6213370633533 (complete conservation 2)" />
+        		<String fx:value="Random" />
+        		<String fx:value="Others" />
+      		</FXCollections>
+    	 </items>
+       </ComboBox>
+      <Button fx:id="btnEnter" layoutX="380.0" layoutY="85.0" mnemonicParsing="false" onAction="#onBtnEnterClicked" prefHeight="25.0" prefWidth="68.0" text="Enter" />
+      <ComboBox fx:id="combInitial" layoutX="189.0" layoutY="229.0" onAction="#onInitialDropdown" prefHeight="25.0" prefWidth="269.0">
+         <items>
+      		<FXCollections fx:factory="observableArrayList">
+        		<String fx:value="Random -- Real" />
+        		<String fx:value="Random -- Integer" />
+      		</FXCollections>
+    	 </items>
+       </ComboBox>
+   </children>
+</AnchorPane>
